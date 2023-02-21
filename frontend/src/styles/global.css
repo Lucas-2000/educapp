@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+:root {
+  --main-color: #3cc368;
+  --secondary-color: #84e;
+  --bg-color: #201b2c;
+  --bg-secondary-color: #333;
+  --light-text-color: #fff;
+  --dark-text-color: #000;
+}
