@@ -1,0 +1,12 @@
+.footer {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-dark-secondary-color);
+}
+
+.footer > p {
+  color: var(--light-text-color);
+  font: 700 1rem "Roboto", sans-serif;
+}

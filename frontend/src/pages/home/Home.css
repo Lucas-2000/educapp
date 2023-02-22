@@ -1,0 +1,10 @@
+.body-home {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.section-about {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+}
