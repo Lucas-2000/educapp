@@ -1,0 +1,26 @@
+.questions {
+  position: relative;
+}
+
+.questions > p {
+  font: 500 1rem "Poppins", sans-serif;
+  color: var(--light-text-color);
+  max-width: 95%;
+}
+
+.questions > i {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: var(--light-text-color);
+  cursor: pointer;
+}
+
+.answer {
+  margin-top: 1rem;
+}
+
+.answer > p {
+  font: 400 1rem "Roboto", sans-serif;
+  color: var(--bg-light-color);
+}

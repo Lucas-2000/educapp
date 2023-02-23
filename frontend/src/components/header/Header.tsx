@@ -10,7 +10,7 @@ export const Header = () => {
       <nav>
         <ul className="navigation">
           <li>
-            <Link path="/Login">Login</Link>
+            <Link path="/login">Login</Link>
           </li>
           <li>
             <Link path="/register">Cadastrar</Link>

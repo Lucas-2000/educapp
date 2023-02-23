@@ -1,7 +1,7 @@
 .link {
   font: 400 1rem "Roboto", sans-serif;
   color: var(--light-text-color);
-  background: var(--main-color);
+  background: var(--secondary-color);
   padding: 1rem 2rem;
   border-radius: 0.25rem;
   transition: 0.3s;

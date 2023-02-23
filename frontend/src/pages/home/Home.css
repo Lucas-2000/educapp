@@ -5,6 +5,24 @@
 
 .section-about {
   display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.section-about > img {
+  max-width: 100%;
+}
+
+.section-about > p {
+  font: 400 1rem "Roboto", sans-serif;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.section-faq {
+  width: 100%;
+  padding: 1rem;
+  background: var(--bg-dark-color);
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
 }
