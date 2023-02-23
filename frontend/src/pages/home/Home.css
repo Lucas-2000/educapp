@@ -19,6 +19,64 @@
   line-height: 1.5;
 }
 
+.section-planos {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.planos {
+  background: var(--bg-dark-color);
+  min-height: 400px;
+  padding: 2rem;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+
+.planos > h3 {
+  display: inline;
+  color: var(--light-text-color);
+  font: 700 1.125rem "Poppins", sans-serif;
+}
+
+.planos > span {
+  color: var(--main-color);
+  margin-left: 0.5rem;
+  font: 500 1rem "Roboto", sans-serif;
+}
+
+.planos-vantagens {
+  position: relative;
+  text-align: start;
+}
+
+.planos-vantagens > p {
+  font: 400 1rem "Roboto", sans-serif;
+  margin-top: 1rem;
+  color: var(--light-text-color);
+}
+
+.planos-vantagens > p::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--secondary-color);
+  position: absolute;
+  left: -16px;
+}
+
+.planos-valor {
+  margin-bottom: 2rem;
+}
+
+.planos-valor > span {
+  font: 700 1rem "Roboto", sans-serif;
+  color: var(--main-color);
+}
+
 .section-faq {
   width: 100%;
   padding: 1rem;

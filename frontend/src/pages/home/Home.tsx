@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Home.css";
 import { Container } from "../../components/container/Container";
 import { Footer } from "../../components/footer/Footer";
 import { Header } from "../../components/header/Header";
 import { Subtitle } from "../../components/subtitle/Subtitle";
 import webinar from "../../images/webinar-animate.svg";
-import { CaretDown, CaretUp } from "phosphor-react";
 import { Faq } from "../../utils/lists/Faq";
 import { Accordion } from "../../components/accordion/Accordion";
+import { Button } from "../../components/button/Button";
 
 export const Home = () => {
   return (
@@ -38,8 +38,61 @@ export const Home = () => {
               poderem ter acesso às aulas.
             </p>
           </section>
+          <Subtitle>Planos</Subtitle>
+          <section className="section-planos">
+            <div className="planos">
+              <h3>Plano Bronze</h3>
+              <div className="planos-vantagens">
+                <p>Acesso por 1 mês</p>
+                <p>Aulas ao vivo e gravadas ilimitadas</p>
+                <p>Exercícios ilimitados</p>
+                <p className="planos-valor">
+                  <span>R$ 69,99</span>
+                </p>
+              </div>
+              <Button type="submit" background="var(--secondary-color)">
+                Assinar
+              </Button>
+            </div>
+            <div className="planos">
+              <h3>Plano Prata</h3>
+              <div className="planos-vantagens">
+                <p>Acesso por 6 meses</p>
+                <p>Aulas ao vivo e gravadas ilimitadas</p>
+                <p>Exercícios ilimitados</p>
+                <p>Grupo para interação com outros alunos</p>
+                <p className="planos-valor">
+                  <span>R$ 359,94 (59,99 por mês)</span> podendo parcelar em 6
+                  vezes
+                </p>
+              </div>
+              <Button type="submit" background="var(--secondary-color)">
+                Assinar
+              </Button>
+            </div>
+            <div className="planos">
+              <h3>Plano Ouro</h3>
+              <span>(Recomendado)</span>
+              <div className="planos-vantagens">
+                <p>Acesso por 12 meses</p>
+                <p>Aulas ao vivo e gravadas ilimitadas</p>
+                <p>Exercícios ilimitados</p>
+                <p>Programa de mentoria individual</p>
+                <p>Rever gravação de aulas ao vivo</p>
+                <p>Grupo para interação com outros alunos</p>
+                <p>Bônus de aulas extras de redação e inglês</p>
+                <p className="planos-valor">
+                  <span>R$ 599,88 (49,99 por mês)</span> podendo parcelar em 12
+                  vezes
+                </p>
+              </div>
+              <Button type="submit" background="var(--secondary-color)">
+                Assinar
+              </Button>
+            </div>
+          </section>
           <Subtitle>Faq</Subtitle>
-          {Faq.map((faq, index) => (
+          {Faq.map((faq) => (
             <section className="section-faq">
               <Accordion
                 id={faq.id}

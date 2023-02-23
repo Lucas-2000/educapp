@@ -2,13 +2,13 @@ export const Faq = [
   {
     id: 1,
     question: "Quem pode usar?",
-    answer: "Acima de 13 anos",
+    answer: "Livre para todas as idades",
   },
   {
     id: 2,
     question: "É de graça?",
     answer:
-      "Para professores sim, para alunos os valores começam a partir R$ 24,99 por mês",
+      "Para professores sim, para alunos os valores começam a partir R$ 29,99 por mês",
   },
   {
     id: 3,

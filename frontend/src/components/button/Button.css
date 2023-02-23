@@ -1,0 +1,13 @@
+.button {
+  padding: 1rem 2rem;
+  border-radius: 0.25rem;
+  font: 700 1rem "Poppins", sans-serif;
+  color: var(--dark-text-color);
+  text-transform: uppercase;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.button:hover {
+  opacity: 0.7;
+}
