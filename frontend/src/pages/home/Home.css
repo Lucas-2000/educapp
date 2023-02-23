@@ -26,3 +26,14 @@
   border-radius: 0.25rem;
   margin-bottom: 1rem;
 }
+
+@media (max-width: 800px) {
+  .section-about {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  .section-about > img {
+    display: none;
+  }
+}
