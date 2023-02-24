@@ -1,0 +1,43 @@
+.bg-color {
+  background: var(--bg-dark-color);
+  height: 100vh;
+}
+
+.register {
+  padding: 2rem;
+}
+
+.header-register {
+  text-align: center;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-register p {
+  font: 400 1rem "Roboto", sans-serif;
+  color: var(--light-text-color);
+}
+
+.form-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--bg-dark-secondary-color);
+}
+
+.form-container form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.actions button {
+  margin: 0;
+}

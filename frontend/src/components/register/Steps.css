@@ -1,0 +1,34 @@
+.steps {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.steps::after {
+  content: "";
+  width: 550px;
+  border-bottom: 1px solid #ccc;
+  position: absolute;
+  top: 24px;
+}
+
+.step {
+  text-align: center;
+  background: var(--bg-dark-secondary-color);
+  z-index: 1;
+  width: 120px;
+  padding: 0.5rem;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.active > .icon-form {
+  color: var(--secondary-color);
+}

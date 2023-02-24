@@ -1,0 +1,23 @@
+.input-wrapper {
+  margin-bottom: 1rem;
+}
+
+.label-form {
+  display: block;
+  font: 400 1rem "Roboto", sans-serif;
+  color: var(--light-text-color);
+}
+
+.input-form {
+  width: 100%;
+  border: 4px solid transparent;
+  border-radius: 0.25rem;
+  font: 400 1rem "Roboto", sans-serif;
+  padding: 1rem;
+  transition: 0.3s;
+}
+
+.input-form:focus {
+  outline: none;
+  border: 4px solid var(--secondary-color);
+}

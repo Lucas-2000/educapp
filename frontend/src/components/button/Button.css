@@ -4,8 +4,13 @@
   font: 700 1rem "Poppins", sans-serif;
   color: var(--dark-text-color);
   text-transform: uppercase;
-  width: 100%;
   transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 1rem;
+  border: none;
 }
 
 .button:hover {

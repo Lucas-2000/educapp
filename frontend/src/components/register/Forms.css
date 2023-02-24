@@ -1,0 +1,21 @@
+.select {
+  width: 100%;
+  border: 4px solid transparent;
+  border-radius: 0.25rem;
+  font: 400 1rem "Roboto", sans-serif;
+  padding: 1rem;
+  transition: 0.3s;
+  margin-bottom: 1rem;
+}
+
+.select:focus {
+  outline: none;
+  border: 4px solid var(--secondary-color);
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}

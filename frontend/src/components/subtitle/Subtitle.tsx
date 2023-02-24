@@ -1,6 +1,11 @@
-import React, { PropsWithChildren } from "react";
+import React from "react";
+import { ISubtitleProps } from "../../interfaces/ISubtitleProps";
 import "./Subtitle.css";
 
-export const Subtitle = ({ children }: PropsWithChildren) => {
-  return <h2 className="subtitle">{children}</h2>;
+export const Subtitle = ({ children, color }: ISubtitleProps) => {
+  return (
+    <h2 className="subtitle" style={{ color: `${color}` }}>
+      {children}
+    </h2>
+  );
 };
