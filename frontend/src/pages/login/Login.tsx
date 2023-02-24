@@ -1,8 +1,7 @@
 import React from "react";
 import "./Login.css";
 import webinar from "../../images/webinar-animate.svg";
-import google from "../../images/GoogleLogo.png";
-import facebook from "../../images/FacebookLogo.png";
+import { FacebookLogo, GoogleLogo } from "phosphor-react";
 
 export const Login = () => {
   return (
@@ -27,20 +26,12 @@ export const Login = () => {
             </div>
             <button className="btn-login">Login</button>
             <div className="btn-login-social">
-              <button className="btn-social">
-                <img
-                  src={google}
-                  alt="Logo Google"
-                  className="left-login-image"
-                />
+              <button className="btn-social google">
+              <GoogleLogo size={32} />
                 Google
               </button>
-              <button className="btn-social">
-                <img
-                  src={facebook}
-                  alt="Logo Facebok"
-                  className="left-login-image"
-                />
+              <button className="btn-social facebook">
+              <FacebookLogo size={32} />
                 Facebook
               </button>
             </div>
