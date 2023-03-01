@@ -6,6 +6,7 @@ export const Input = ({
   label,
   placeholder,
   name,
+  required,
   type,
   value,
   onChange,
@@ -14,6 +15,7 @@ export const Input = ({
     <div className="input-wrapper">
       <label className="label-form">{label}</label>
       <input
+        required={required}
         className="input-form"
         placeholder={placeholder}
         name={name}

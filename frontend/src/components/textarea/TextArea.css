@@ -1,24 +1,25 @@
-.input-wrapper {
+.text-wrapper {
   margin-bottom: 1rem;
 }
 
-.label-form {
+.label-textarea {
   display: block;
   font: 400 1rem "Roboto", sans-serif;
   color: var(--light-text-color);
   margin-bottom: 0.5rem;
 }
 
-.input-form {
+.textarea-form {
   width: 100%;
   border: 4px solid transparent;
   border-radius: 0.25rem;
   font: 400 1rem "Roboto", sans-serif;
   padding: 1rem;
   transition: 0.3s;
+  resize: none;
 }
 
-.input-form:focus {
+.textarea-form:focus {
   outline: none;
   border: 4px solid var(--secondary-color);
 }

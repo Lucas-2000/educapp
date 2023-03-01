@@ -20,7 +20,7 @@ export const Steps = ({ currentStep }: IStepsProps) => {
       </div>
       <div className={`step ${currentStep >= 3 ? "active" : ""}`}>
         <Star className="icon-form" weight="bold" size={24} />
-        <p>Avaliação</p>
+        <p>Submissão</p>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Register.css";
 import { Title } from "../../components/title/Title";
 import { Button } from "../../components/button/Button";
@@ -7,16 +7,35 @@ import { ArrowLeft, ArrowRight, PaperPlaneTilt } from "phosphor-react";
 import { TypeForm } from "../../components/register/TypeForm";
 import { DataForm } from "../../components/register/DataForm";
 import { ProfileForm } from "../../components/register/ProfileForm";
-import { Review } from "../../components/register/Review";
+import { SendForm } from "../../components/register/SendForm";
 import { useForm } from "../../hooks/useForm";
 import { Steps } from "../../components/register/Steps";
 
+const formTemplate = {
+  type: "",
+  name: "",
+  email: "",
+  password: "",
+  rePassword: "",
+  bio: "",
+  comp: "",
+  education: "",
+};
+
 export const Register = () => {
+  const [data, setData] = useState(formTemplate);
+
+  const updateFieldHandler = (key: string, value: string) => {
+    setData((prev) => {
+      return { ...prev, [key]: value };
+    });
+  };
+
   const formComponents = [
-    <TypeForm />,
-    <DataForm />,
-    <ProfileForm />,
-    <Review />,
+    <TypeForm data={data} updateFieldHandler={updateFieldHandler} />,
+    <DataForm data={data} updateFieldHandler={updateFieldHandler} />,
+    <ProfileForm data={data} updateFieldHandler={updateFieldHandler} />,
+    <SendForm data={data} updateFieldHandler={updateFieldHandler} />,
   ];
 
   const { currentStep, currentComponent, changeStep, isLastStep, isFirstStep } =

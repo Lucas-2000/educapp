@@ -18,4 +18,10 @@
   flex-direction: column;
   gap: 0.6rem;
   margin-bottom: 2rem;
+  text-align: justify;
+}
+
+.review-data {
+  text-align: left;
+  font: 500 1rem Roboto, sans-serif;
 }
