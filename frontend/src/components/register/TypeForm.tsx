@@ -13,6 +13,7 @@ export const TypeForm = ({ data, updateFieldHandler }: IDataProps) => {
         value={data.type}
         onChange={(e) => updateFieldHandler("type", e.target.value)}
       >
+        <option value="">Selecione</option>
         <option value="Aluno">Aluno</option>
         <option value="Professor">Professor</option>
       </select>

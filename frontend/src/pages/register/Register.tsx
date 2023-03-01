@@ -72,7 +72,7 @@ export const Register = () => {
                 ) : (
                   <Button type="submit" background="var(--secondary-color)">
                     <PaperPlaneTilt size={32} />
-                    <span>Avaliar</span>
+                    <span>Finalizar</span>
                   </Button>
                 )}
               </div>

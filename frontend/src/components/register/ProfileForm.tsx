@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { IDataProps } from "../../interfaces/IDataProps";
 import { Subtitle } from "../subtitle/Subtitle";
-import { TextArea } from "../textarea/Textarea";
+import { TextArea } from "../textarea/TextArea";
 import "./Forms.css";
 
 export const ProfileForm = ({ data, updateFieldHandler }: IDataProps) => {
@@ -37,6 +37,7 @@ export const ProfileForm = ({ data, updateFieldHandler }: IDataProps) => {
           value={data.education}
           onChange={(e) => updateFieldHandler("education", e.target.value)}
         >
+          <option value="">Selecione</option>
           <option value="Bacharel">Bacharel</option>
           <option value="Mestre">Mestre</option>
           <option value="Doutor">Doutor</option>
