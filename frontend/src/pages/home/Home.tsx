@@ -12,12 +12,12 @@ import { Button } from "../../components/button/Button";
 export const Home = () => {
   return (
     <>
-      <Container>
-        <Header />
-        <div className="body-home">
-          <Subtitle>Sobre o EducApp</Subtitle>
-          <section className="section-about">
-            <img src={webinar} alt="img" />
+      <Header />
+      <div className="body-home">
+        <section className="section-about">
+          <div className="about-text">
+            <h4>Bem vindos ao EducApp</h4>
+            <h1>Acesse suas melhores aulas</h1>
             <p>
               O EducApp é voltado para a educação de forma online para
               professores que desejam dar aulas e alunos que queiram ter aulas,
@@ -37,72 +37,76 @@ export const Home = () => {
               extra e os alunos possam gastar um dinheiro não tão alto para
               poderem ter acesso às aulas.
             </p>
+            <a href="#" className="about-btn">Cadastre-se</a>
+          </div>
+          <div className="about-img">
+            <img src={webinar} alt="Aula Animada" />
+          </div>
+        </section>
+        <Subtitle>Planos</Subtitle>
+        <section className="section-planos">
+          <div className="planos">
+            <h3>Plano Bronze</h3>
+            <div className="planos-vantagens">
+              <p>Acesso por 1 mês</p>
+              <p>Aulas ao vivo e gravadas ilimitadas</p>
+              <p>Exercícios ilimitados</p>
+              <p className="planos-valor">
+                <span>R$ 69,99</span>
+              </p>
+            </div>
+            <Button type="submit" background="var(--secondary-color)">
+              Assinar
+            </Button>
+          </div>
+          <div className="planos">
+            <h3>Plano Prata</h3>
+            <div className="planos-vantagens">
+              <p>Acesso por 6 meses</p>
+              <p>Aulas ao vivo e gravadas ilimitadas</p>
+              <p>Exercícios ilimitados</p>
+              <p>Grupo para interação com outros alunos</p>
+              <p className="planos-valor">
+                <span>R$ 359,94 (59,99 por mês)</span> podendo parcelar em 6
+                vezes
+              </p>
+            </div>
+            <Button type="submit" background="var(--secondary-color)">
+              Assinar
+            </Button>
+          </div>
+          <div className="planos">
+            <h3>Plano Ouro</h3>
+            <span>(Recomendado)</span>
+            <div className="planos-vantagens">
+              <p>Acesso por 12 meses</p>
+              <p>Aulas ao vivo e gravadas ilimitadas</p>
+              <p>Exercícios ilimitados</p>
+              <p>Programa de mentoria individual</p>
+              <p>Rever gravação de aulas ao vivo</p>
+              <p>Grupo para interação com outros alunos</p>
+              <p>Bônus de aulas extras de redação e inglês</p>
+              <p className="planos-valor">
+                <span>R$ 599,88 (49,99 por mês)</span> podendo parcelar em 12
+                vezes
+              </p>
+            </div>
+            <Button type="submit" background="var(--secondary-color)">
+              Assinar
+            </Button>
+          </div>
+        </section>
+        <Subtitle>Faq</Subtitle>
+        {Faq.map((faq) => (
+          <section className="section-faq">
+            <Accordion
+              id={faq.id}
+              question={faq.question}
+              answer={faq.answer}
+            />
           </section>
-          <Subtitle>Planos</Subtitle>
-          <section className="section-planos">
-            <div className="planos">
-              <h3>Plano Bronze</h3>
-              <div className="planos-vantagens">
-                <p>Acesso por 1 mês</p>
-                <p>Aulas ao vivo e gravadas ilimitadas</p>
-                <p>Exercícios ilimitados</p>
-                <p className="planos-valor">
-                  <span>R$ 69,99</span>
-                </p>
-              </div>
-              <Button type="submit" background="var(--secondary-color)">
-                Assinar
-              </Button>
-            </div>
-            <div className="planos">
-              <h3>Plano Prata</h3>
-              <div className="planos-vantagens">
-                <p>Acesso por 6 meses</p>
-                <p>Aulas ao vivo e gravadas ilimitadas</p>
-                <p>Exercícios ilimitados</p>
-                <p>Grupo para interação com outros alunos</p>
-                <p className="planos-valor">
-                  <span>R$ 359,94 (59,99 por mês)</span> podendo parcelar em 6
-                  vezes
-                </p>
-              </div>
-              <Button type="submit" background="var(--secondary-color)">
-                Assinar
-              </Button>
-            </div>
-            <div className="planos">
-              <h3>Plano Ouro</h3>
-              <span>(Recomendado)</span>
-              <div className="planos-vantagens">
-                <p>Acesso por 12 meses</p>
-                <p>Aulas ao vivo e gravadas ilimitadas</p>
-                <p>Exercícios ilimitados</p>
-                <p>Programa de mentoria individual</p>
-                <p>Rever gravação de aulas ao vivo</p>
-                <p>Grupo para interação com outros alunos</p>
-                <p>Bônus de aulas extras de redação e inglês</p>
-                <p className="planos-valor">
-                  <span>R$ 599,88 (49,99 por mês)</span> podendo parcelar em 12
-                  vezes
-                </p>
-              </div>
-              <Button type="submit" background="var(--secondary-color)">
-                Assinar
-              </Button>
-            </div>
-          </section>
-          <Subtitle>Faq</Subtitle>
-          {Faq.map((faq) => (
-            <section className="section-faq">
-              <Accordion
-                id={faq.id}
-                question={faq.question}
-                answer={faq.answer}
-              />
-            </section>
-          ))}
-        </div>
-      </Container>
+        ))}
+      </div>
       <Footer>Todos os direitos reservados. 2022</Footer>
     </>
   );
