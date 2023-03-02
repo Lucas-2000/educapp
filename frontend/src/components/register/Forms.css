@@ -24,4 +24,8 @@
 .review-data {
   text-align: left;
   font: 500 1rem Roboto, sans-serif;
+  max-width: 40ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

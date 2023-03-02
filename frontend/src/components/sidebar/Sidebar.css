@@ -1,0 +1,128 @@
+.sidebar-container {
+  position: fixed;
+  width: 300px;
+  background: var(--bg-dark-secondary-color);
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.sidebar-container hr {
+  margin: 0.5rem 0 0 0;
+}
+
+.sidebar-header {
+  position: relative;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.sidebar-header-close {
+  position: absolute;
+  right: -20px;
+  top: 8px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background: var(--secondary-color);
+  color: var(--light-text-color);
+  transition: all 0.3s;
+}
+
+.sidebar-header-close:hover {
+  opacity: 0.7;
+  outline: none;
+  border: 2px solid var(--light-text-color);
+}
+
+.sidebar-header-search {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.sidebar-header-search input {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 4px solid transparent;
+  font: 400 1rem "Roboto";
+  transition: 0.3s;
+  color: var(--light-text-color);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.sidebar-header-search input:focus {
+  outline: none;
+  border: 4px solid var(--secondary-color);
+}
+
+.sidebar-header-search input::placeholder {
+  color: var(--light-text-color);
+}
+
+.sidebar-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.sidebar-link {
+  color: var(--light-text-color);
+  padding: 1rem;
+  width: 100%;
+  border-bottom: solid 1px var(--dark-text-color);
+  border-top: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 5px transparent;
+  background: #444;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+  font: 700 1rem "Poppins";
+  transition: all 0.5s;
+}
+
+.sidebar-link:hover {
+  opacity: 0.7;
+  padding: 2rem 1rem;
+}
+
+.sidebar-footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid var(--light-text-color);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.sidebar-footer-link {
+  color: var(--light-text-color);
+  padding: 1rem;
+  border-bottom: solid 1px var(--dark-text-color);
+  border-top: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 5px transparent;
+  background: #444;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+  font: 700 1rem "Poppins";
+  transition: all 0.5s;
+}
+
+.sidebar-footer-link:hover {
+  opacity: 0.7;
+}
+
+@media (max-height: 615px) {
+  .sidebar-footer {
+    position: static;
+  }
+}
