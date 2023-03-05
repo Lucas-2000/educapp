@@ -1,4 +1,3 @@
-
 .section-about {
   width: 100%;
   height: 100vh;
@@ -8,24 +7,24 @@
   padding: 0 5%;
 }
 
-.about-text{
+.about-text {
   max-width: 45rem;
 }
 
-.about-text h4{
+.about-text h4 {
   font-size: 1.7rem;
   color: var(--main-color);
   margin-bottom: 1rem;
 }
 
-.about-text h1{
+.about-text h1 {
   font-size: 4rem;
   margin-bottom: 1rem;
   line-height: 4rem;
   color: var(--secondary-color);
 }
 
-.about-text p{
+.about-text p {
   font-size: 1.1rem;
   margin-bottom: 4rem;
   text-align: justify;
@@ -41,84 +40,155 @@
   transition: all 0.5s;
 }
 
-.about-btn:hover{
+.about-btn:hover {
   background: #38D940;
 }
 
-.about-img{
+.about-img {
   display: flex;
   width: 50%;
 }
-.about-img img{
+
+.about-img img {
   width: 100%;
 }
 
 
 .section-planos {
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1rem;
+  background: var(--bg-dark-color);
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.section-planos h1 {
+  font-size: 3.3rem;
+  margin: 3.3rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--light-text-color);
 }
 
 .planos {
-  background: var(--bg-dark-color);
-  min-height: 400px;
-  padding: 2rem;
-  border-radius: 0.25rem;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.planos>h3 {
-  display: inline;
+.plano {
+  background: var(--secondary-color);
   color: var(--light-text-color);
-  font: 700 1.125rem "Poppins", sans-serif;
+  border-radius: 10px;
 }
 
-.planos>span {
+.planos .rec {
+  background: var(--bg-dark-secondary-color);
+  color: var(--light-text-color);
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.section-planos ul {
+  margin: 2.6rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-planos ul li {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  padding: 0.5rem 0;
+  font-weight: 700;
+}
+
+ul li.price {
+  font-size: 3rem;
   color: var(--main-color);
-  margin-left: 0.5rem;
-  font: 500 1rem "Roboto", sans-serif;
+  padding-bottom: 1rem;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
 }
 
-.planos-vantagens {
-  position: relative;
-  text-align: start;
+.shadow {
+  box-shadow: 0px 10px 40px #00000056;
 }
 
-.planos-vantagens>p {
-  font: 400 1rem "Roboto", sans-serif;
+.plano a {
   margin-top: 1rem;
+  height: 2.6rem;
+  width: 13.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: var(--main-color);
   color: var(--light-text-color);
+  font-weight: 500;
 }
 
-.planos-vantagens>p::before {
-  content: "";
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  background-color: var(--secondary-color);
-  position: absolute;
-  left: -16px;
-}
-
-.planos-valor {
-  margin-bottom: 2rem;
-}
-
-.planos-valor>span {
-  font: 700 1rem "Roboto", sans-serif;
-  color: var(--main-color);
+.tipo {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .section-faq {
-  width: 100%;
-  padding: 1rem;
-  background: var(--bg-dark-color);
-  border-radius: 0.25rem;
-  margin-bottom: 1rem;
+  min-height: 100vh;
+  display: flex;
+  background: var(--light-text-color);
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
 }
+
+.section-faq h1 {
+  font-size: 3.3rem;
+  margin: 3.3rem 0;
+  color: var(--light-text-color);
+}
+
+.faq {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  background-color: var(--bg-dark-secondary-color);
+  border-radius: 20px;
+  padding: 45px 90px;
+}
+
+.image-faq {
+  height: 540px;
+  width: 450px;
+}
+
+.image-faq img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.faq .text-faq {
+  max-width: 100%;
+}
+
 
 @media (max-width: 800px) {
   .section-about {
@@ -128,21 +198,21 @@
     gap: 5rem;
   }
 
-  .about-text h4{
+  .about-text h4 {
     font-size: 1.5rem;
   }
 
-  .about-text h1{
+  .about-text h1 {
     font-size: 2.5rem;
     line-height: 3rem;
   }
 
-  .about-text p{
+  .about-text p {
     font-size: 1rem;
   }
 
 
-  .about-img{
+  .about-img {
     display: none;
   }
 

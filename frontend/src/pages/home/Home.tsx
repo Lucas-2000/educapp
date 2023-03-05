@@ -8,6 +8,8 @@ import webinar from "../../images/webinar-animate.svg";
 import { Faq } from "../../utils/lists/Faq";
 import { Accordion } from "../../components/accordion/Accordion";
 import { Button } from "../../components/button/Button";
+import { CheckCircle } from "phosphor-react";
+import faq from "../../images/faq.svg";
 
 export const Home = () => {
   return (
@@ -43,69 +45,70 @@ export const Home = () => {
             <img src={webinar} alt="Aula Animada" />
           </div>
         </section>
-        <Subtitle>Planos</Subtitle>
         <section className="section-planos">
+          <h1 className="planos-title">Nossos Planos</h1>
           <div className="planos">
-            <h3>Plano Bronze</h3>
-            <div className="planos-vantagens">
-              <p>Acesso por 1 mês</p>
-              <p>Aulas ao vivo e gravadas ilimitadas</p>
-              <p>Exercícios ilimitados</p>
-              <p className="planos-valor">
-                <span>R$ 69,99</span>
-              </p>
+            <div className="plano shadow">
+              <ul>
+                <li className="tipo">Plano Bronze</li>
+                <li className="price">R$ 69,99</li>
+                <li><CheckCircle size={32} weight="fill" />Acesso por 1 mês</li>
+                <li><CheckCircle size={32} weight="fill" />Aulas ao vivo e gravadas ilimitadas</li>
+                <li><CheckCircle size={32} weight="fill" />Exercícios ilimitados</li>
+                <a href="#" className="planos-btn">
+                  Assinar
+                </a>
+              </ul>
+
             </div>
-            <Button type="submit" background="var(--secondary-color)">
-              Assinar
-            </Button>
-          </div>
-          <div className="planos">
-            <h3>Plano Prata</h3>
-            <div className="planos-vantagens">
-              <p>Acesso por 6 meses</p>
-              <p>Aulas ao vivo e gravadas ilimitadas</p>
-              <p>Exercícios ilimitados</p>
-              <p>Grupo para interação com outros alunos</p>
-              <p className="planos-valor">
-                <span>R$ 359,94 (59,99 por mês)</span> podendo parcelar em 6
-                vezes
-              </p>
+            <div className="plano rec">
+              <ul>
+                <li className="tipo">Plano Ouro</li>
+                <li className="price"> R$ 599,88</li>
+                <li><CheckCircle size={32} weight="fill" />Acesso por 12 meses</li>
+                <li><CheckCircle size={32} weight="fill" />Aulas ao vivo e gravadas ilimitadas</li>
+                <li><CheckCircle size={32} weight="fill" />Exercícios ilimitados</li>
+                <li><CheckCircle size={32} weight="fill" />Programa de mentoria individual</li>
+                <li><CheckCircle size={32} weight="fill" />Rever gravação de aulas ao vivo</li>
+                <li><CheckCircle size={32} weight="fill" />Grupo para interação com outros alunos</li>
+                <li><CheckCircle size={32} weight="fill" />Bônus de aulas extras de redação e inglês</li>
+                <a href="#" className="planos-btn">
+                  Assinar
+                </a>
+              </ul>
             </div>
-            <Button type="submit" background="var(--secondary-color)">
-              Assinar
-            </Button>
-          </div>
-          <div className="planos">
-            <h3>Plano Ouro</h3>
-            <span>(Recomendado)</span>
-            <div className="planos-vantagens">
-              <p>Acesso por 12 meses</p>
-              <p>Aulas ao vivo e gravadas ilimitadas</p>
-              <p>Exercícios ilimitados</p>
-              <p>Programa de mentoria individual</p>
-              <p>Rever gravação de aulas ao vivo</p>
-              <p>Grupo para interação com outros alunos</p>
-              <p>Bônus de aulas extras de redação e inglês</p>
-              <p className="planos-valor">
-                <span>R$ 599,88 (49,99 por mês)</span> podendo parcelar em 12
-                vezes
-              </p>
+            <div className="plano shadow">
+              <ul>
+                <li className="tipo">Plano Prata</li>
+                <li className="price">R$ 359,94</li>
+                <li><CheckCircle size={32} weight="fill" />Acesso por 6 meses</li>
+                <li><CheckCircle size={32} weight="fill" />Aulas ao vivo e gravadas ilimitadas</li>
+                <li><CheckCircle size={32} weight="fill" />Exercícios ilimitados</li>
+                <li><CheckCircle size={32} weight="fill" />Grupo para interação com outros alunos</li>
+                <a href="#" className="planos-btn">
+                  Assinar
+                </a>
+              </ul>
             </div>
-            <Button type="submit" background="var(--secondary-color)">
-              Assinar
-            </Button>
           </div>
         </section>
-        <Subtitle>Faq</Subtitle>
-        {Faq.map((faq) => (
-          <section className="section-faq">
-            <Accordion
-              id={faq.id}
-              question={faq.question}
-              answer={faq.answer}
-            />
-          </section>
-        ))}
+        <section className="section-faq">
+          <div className="faq">
+            <div className="image-faq">
+              <img src={faq} />
+            </div>
+            <div className="text-faq">
+            <h1>FAQ</h1>
+              {Faq.map((faq) => (
+                <Accordion
+                  id={faq.id}
+                  question={faq.question}
+                  answer={faq.answer}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
       </div>
       <Footer>Todos os direitos reservados. 2022</Footer>
     </>

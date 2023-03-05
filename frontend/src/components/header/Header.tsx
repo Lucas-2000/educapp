@@ -18,10 +18,10 @@ export const Header = () => {
       <Title>EducApp</Title>
       <ul className={`navigation ${state}`}>
         <li>
-          <a href="/#">Home</a>
+          <a href="">Home</a>
         </li>
         <li>
-          <a href="/#">Planos</a>
+          <a href="#section-planos">Planos</a>
         </li>
         <li>
           <a href="/#">FAQ</a>
