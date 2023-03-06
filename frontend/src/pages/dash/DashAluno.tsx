@@ -1,10 +1,11 @@
 import React from "react";
 import { Siderbar } from "../../components/sidebar/Siderbar";
+import { ISidebarProps } from "../../interfaces/ISidebarProps";
 
-export const DashAluno = () => {
+export const DashAluno = ({ isAluno }: ISidebarProps) => {
   return (
     <div>
-      <Siderbar />
+      <Siderbar isAluno={isAluno} />
     </div>
   );
 };
