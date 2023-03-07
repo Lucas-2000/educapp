@@ -1,0 +1,23 @@
+.carousel-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.carousel {
+  cursor: grab;
+  overflow: hidden;
+}
+
+.inner {
+  display: flex;
+  gap: 1rem;
+}
+
+.item {
+  min-height: 400px;
+  min-width: 400px;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  pointer-events: none;
+}

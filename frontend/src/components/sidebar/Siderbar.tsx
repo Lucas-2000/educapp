@@ -18,7 +18,7 @@ import { Subtitle } from "../subtitle/Subtitle";
 import "./Sidebar.css";
 
 export const Siderbar = ({ isAluno }: ISidebarProps) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   function handleCloseSidebar() {
     setIsOpen(false);
@@ -48,7 +48,7 @@ export const Siderbar = ({ isAluno }: ISidebarProps) => {
           <hr />
           {isAluno ? (
             <div className="sidebar-options">
-              <a className="sidebar-link" href="#">
+              <a className="sidebar-link" href="/dashboard">
                 <House size={32} />
                 Painel
               </a>
@@ -75,7 +75,7 @@ export const Siderbar = ({ isAluno }: ISidebarProps) => {
             </div>
           ) : (
             <div className="sidebar-options">
-              <a className="sidebar-link" href="#">
+              <a className="sidebar-link" href="/dashboard">
                 <House size={32} />
                 Painel
               </a>
@@ -126,7 +126,7 @@ export const Siderbar = ({ isAluno }: ISidebarProps) => {
           <hr />
           {isAluno ? (
             <div className="sidebar-options">
-              <a className="sidebar-link" href="#">
+              <a className="sidebar-link" href="/dashboard">
                 <House size={32} />
               </a>
               <a className="sidebar-link" href="#">
@@ -147,7 +147,7 @@ export const Siderbar = ({ isAluno }: ISidebarProps) => {
             </div>
           ) : (
             <div className="sidebar-options">
-              <a className="sidebar-link" href="#">
+              <a className="sidebar-link" href="/dashboard">
                 <House size={32} />
               </a>
               <a className="sidebar-link" href="#">
