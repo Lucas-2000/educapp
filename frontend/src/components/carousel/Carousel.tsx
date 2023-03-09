@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Carousel.css";
 import { motion } from "framer-motion";
+import { ICarouselProps } from "../../interfaces/ICarouselProps";
 
-export const Carousel = () => {
+export const Carousel = ({ isAluno }: ICarouselProps) => {
   const carousel: any = useRef();
   const [width, setWidth] = useState(0);
 
@@ -25,10 +26,21 @@ export const Carousel = () => {
           animate={{ x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <motion.div className="item">Teste</motion.div>
-          <motion.div className="item">Teste 2</motion.div>
-          <motion.div className="item">Teste 3</motion.div>
-          <motion.div className="item">Teste 4</motion.div>
+          {isAluno ? (
+            <>
+              <motion.div className="item">Teste</motion.div>
+              <motion.div className="item">Teste 2</motion.div>
+              <motion.div className="item">Teste 3</motion.div>
+              <motion.div className="item">Teste 4</motion.div>
+            </>
+          ) : (
+            <>
+              <motion.div className="item">Teste Prof</motion.div>
+              <motion.div className="item">Teste Prof2</motion.div>
+              <motion.div className="item">Teste Prof3</motion.div>
+              <motion.div className="item">Teste Prof4</motion.div>
+            </>
+          )}
         </motion.div>
       </motion.div>
     </div>

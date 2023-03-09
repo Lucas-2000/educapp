@@ -11,7 +11,7 @@ export const DashAluno = ({ isAluno }: ISidebarProps) => {
       <Siderbar isAluno={isAluno} />
       <div className="dash-container">
         <Title>Bem vindo, Aluno</Title>
-        <Carousel />
+        <Carousel isAluno={isAluno} />
       </div>
     </div>
   );
