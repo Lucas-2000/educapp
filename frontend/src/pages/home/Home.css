@@ -33,16 +33,37 @@
 
 .about-btn {
   padding: 15px 45px;
-  background: var(--main-color);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 16px;
+  background: var(--gradient-green);
   color: var(--light-text-color);
   border-radius: 10px;
   font-weight: 800;
-  transition: all 0.5s;
+  transition: transform 0.3s ease 0s;
+  border: none;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .about-btn:hover {
-  background: #38D940;
+  box-shadow: var(--box-shadow-green);
+  animation: pulse 1s linear infinite;
 }
+
 
 .about-img {
   display: flex;
@@ -73,7 +94,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: var(--light-text-color);
+  background-image: var(--gradient-purple);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
 }
 
 .planos {
@@ -119,11 +146,17 @@
 
 ul li.price {
   font-size: 3rem;
-  color: var(--main-color);
   padding-bottom: 1rem;
   font-weight: 800;
   display: flex;
   justify-content: center;
+  background-image: var(--gradient-green);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
 }
 
 .shadow {
@@ -138,10 +171,11 @@ ul li.price {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  background: var(--main-color);
+  background: var(--gradient-green);
   color: var(--light-text-color);
   font-weight: 500;
 }
+
 
 .tipo {
   font-size: 2rem;
@@ -156,19 +190,27 @@ ul li.price {
   background: var(--light-text-color);
   align-items: center;
   justify-content: center;
-  padding: 40px;
+  padding: 0px;
 }
 
 .section-faq h1 {
   font-size: 3.3rem;
-  margin: 3.3rem 0;
-  color: var(--light-text-color);
+  margin: 2rem 0;
+  font-weight: 600px;
+  background-image: var(--gradient-purple);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
 }
 
 .faq {
   display: flex;
   align-items: center;
-  max-width: 100%;
+  justify-content: space-between;
+  width: 70%;
   background-color: var(--bg-dark-secondary-color);
   border-radius: 20px;
   padding: 45px 90px;
@@ -186,7 +228,8 @@ ul li.price {
 }
 
 .faq .text-faq {
-  max-width: 100%;
+  width: 60%;
+  padding-left: 2rem;
 }
 
 

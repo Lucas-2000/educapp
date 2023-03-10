@@ -39,7 +39,7 @@ export const Home = () => {
               extra e os alunos possam gastar um dinheiro não tão alto para
               poderem ter acesso às aulas.
             </p>
-            <a href="#" className="about-btn">Cadastre-se</a>
+            <button className="about-btn">Cadastre-se</button>
           </div>
           <div className="about-img">
             <img src={webinar} alt="Aula Animada" />

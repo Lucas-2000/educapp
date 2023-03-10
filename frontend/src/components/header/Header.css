@@ -7,7 +7,8 @@
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 0;
-  background: var(--secondary-color);
+  background: var(--gradient-purple);
+  box-shadow: var(--box-shadow-purple);
   color: #fff;
   padding: auto;
   border-radius: 5px;
@@ -33,12 +34,12 @@
   color: var(--main-color);
 }
 
-.main{
+.main {
   display: flex;
   align-items: center;
 }
 
-.main a{
+.main a {
   margin-right: 25px;
   margin-left: 10px;
   color: var(--light-text-color);
@@ -51,11 +52,11 @@
   justify-content: center;
 }
 
-.main a:hover{
+.main a:hover {
   color: var(--main-color);
 }
 
-.menu-icon{
+.menu-icon {
   font-size: 35px;
   color: #fff;
   cursor: pointer;
@@ -63,22 +64,24 @@
   display: none;
 }
 
-@media (max-width: 1280px){
-    .header{
-      padding: 14px 2%;
-      transition: .2s;
-    }
-    .navigation a{
-      padding: 5px 0;
-      margin: 0px 20px;
-    }
+@media (max-width: 1280px) {
+  .header {
+    padding: 14px 2%;
+    transition: .2s;
+  }
+
+  .navigation a {
+    padding: 5px 0;
+    margin: 0px 20px;
+  }
 }
 
-@media (max-width: 1090px){
-  .menu-icon{
+@media (max-width: 1090px) {
+  .menu-icon {
     display: block;
   }
-  .navigation{
+
+  .navigation {
     position: absolute;
     top: 7rem;
     right: -100%;
@@ -91,20 +94,21 @@
     border-radius: 10px;
     transition: all .50s ease;
   }
-  .navigation a{
+
+  .navigation a {
     display: block;
     margin: 15px 0;
     padding: 10px 25px;
     transition: all .50s ease;
   }
 
-  .navigation a:hover{
+  .navigation a:hover {
     color: var(--main-color);
     background-color: var(--light-text-color);
     border-radius: 5px;
   }
 
-   .open{
+  .open {
     right: 1rem;
   }
 }
