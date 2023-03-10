@@ -3,3 +3,160 @@
   width: calc(100% - 100px);
   padding: 1rem;
 }
+
+.calendar-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar {
+  height: max-content;
+  width: max-content;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-light-color);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font: 700 1.5rem "Poppins", sans-serif;
+  color: var(--dark-text-color);
+  padding: 0.75rem;
+}
+
+.calendar-body {
+  padding: 0.75rem;
+}
+
+.calendar-week-day {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-weight: 600;
+  height: 50px;
+}
+
+.calendar-week-day div {
+  display: grid;
+  place-items: center;
+  color: var(--secondary-light-text-color);
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  color: var(--dark-text-color);
+}
+
+.calendar-days div {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.month-picker {
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.month-picker:hover {
+  background: var(--secondary-light-text-color);
+}
+
+.year-picker {
+  display: flex;
+  align-items: center;
+}
+
+.year-change {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.year-change:hover {
+  background: var(--secondary-light-text-color);
+}
+
+.calendar-days div span {
+  position: absolute;
+}
+
+.calendar-days div:hover span {
+  transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+}
+
+.calendar-days div span:nth-child(1),
+.calendar-days div span:nth-child(3) {
+  width: 2px;
+  height: 0;
+  background: var(--dark-text-color);
+}
+
+.calendar-days div:hover span:nth-child(1),
+.calendar-days div:hover span:nth-child(3) {
+  height: 100%;
+}
+
+.calendar-days div span:nth-child(1) {
+  bottom: 0;
+  left: 0;
+}
+
+.calendar-days div span:nth-child(3) {
+  top: 0;
+  right: 0;
+}
+
+.calendar-days div span:nth-child(2),
+.calendar-days div span:nth-child(4) {
+  width: 0;
+  height: 2px;
+  background: var(--dark-text-color);
+}
+
+.calendar-days div:hover span:nth-child(2),
+.calendar-days div:hover span:nth-child(4) {
+  width: 100%;
+}
+
+.calendar-days div span:nth-child(2) {
+  top: 0;
+  left: 0;
+}
+
+.calendar-days div span:nth-child(4) {
+  bottom: 0;
+  right: 0;
+}
+
+.calendar-days div:hover span:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.calendar-days div:hover span:nth-child(3) {
+  transition-delay: 0.4s;
+}
+
+.calendar-days div:hover span:nth-child(4) {
+  transition-delay: 0.6s;
+}
