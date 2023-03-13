@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./DashAluno.css";
 import { Siderbar } from "../../components/sidebar/Siderbar";
 import { Title } from "../../components/title/Title";
@@ -6,6 +6,53 @@ import { ISidebarProps } from "../../interfaces/ISidebarProps";
 import { Carousel } from "../../components/carousel/Carousel";
 
 export const DashAluno = ({ isAluno }: ISidebarProps) => {
+  const [day, setDay] = useState(0);
+  const [daysOfMonth, setDaysOfMonth] = useState<number[]>([0]);
+  const [month, setMonth] = useState(0);
+  const [year, setYear] = useState(0);
+  const [currDate, setCurrDate] = useState<Date>(new Date());
+  const [firstDay, setFirstDay] = useState<Date>(new Date());
+
+  function isLeapYear(year: number) {
+    return (
+      (year % 4 === 0 && year % 100 !== 0 && year % 400 !== 0) ||
+      (year % 400 === 0 && year % 100 === 0)
+    );
+  }
+
+  function getFebDays(year: number) {
+    return isLeapYear(year) ? 29 : 28;
+  }
+
+  const monthNames = [
+    "Janeiro",
+    "Fevereiro",
+    "Março",
+    "Abril",
+    "Maio",
+    "Junho",
+    "Julho",
+    "Agosto",
+    "Setembro",
+    "Outubro",
+    "Novembro",
+    "Dezembro",
+  ];
+
+  function generateCalendar(month: number, year: number) {
+    setMonth(month);
+    setYear(year);
+    setDaysOfMonth([31, getFebDays(year), 31, 30, 31, 31, 30, 31, 30, 31]);
+    setCurrDate(new Date());
+    setFirstDay(new Date(month, year, 1));
+
+    for (let i = 0; i <= daysOfMonth[month] + firstDay.getDay() - 1; i++) {
+      if (i >= firstDay.getDay()) {
+        setDay(i - firstDay.getDay() + 1);
+      }
+    }
+  }
+
   return (
     <div>
       <Siderbar isAluno={isAluno} />
