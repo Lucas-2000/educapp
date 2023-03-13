@@ -4,9 +4,10 @@
   align-items: center;
   justify-content: center;
   background: var(--bg-dark-secondary-color);
+  margin-top: 2rem;
 }
 
-.footer > p {
+.footer>p {
   color: var(--light-text-color);
   font: 700 1rem "Roboto", sans-serif;
 }

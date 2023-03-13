@@ -4,22 +4,29 @@ import { IAccordionProps } from "../../interfaces/IAccordionProps";
 import "./Accordion.css";
 
 export const Accordion = ({ id, question, answer }: IAccordionProps) => {
-  const [isActive, setIsActive] = useState(false);
+  const [arrow, setArrow] = useState(false);
+  const [active, setActive] = useState("");
+  const [res, setRes] = useState("");
+
+  const toogleAccordion = () => {
+    setActive(active === "" ? "active" : "");
+    setArrow(!arrow)
+    setRes(res === "" ? "resActive" : "")
+  }
+
 
   return (
     <>
-      <div className="questions" key={id}>
+      <div className={`questions ${active}`} key={id} onClick={toogleAccordion}>
         <p>{question}</p>
-        <i>
-          {!isActive ? (
-            <CaretDown size={32} onClick={() => setIsActive(!isActive)} />
-          ) : (
-            <CaretUp size={32} onClick={() => setIsActive(!isActive)} />
-          )}
-        </i>
+        {!arrow ? (
+          <CaretDown size={32} className="caretDown" />
+        ) : (
+          <CaretUp size={32} className="caretUp" />
+        )}
       </div>
-      {isActive && (
-        <div className="answer" key={id}>
+      {arrow && (
+        <div className={`answer ${res}`} key={id}>
           <p>{answer}</p>
         </div>
       )}
